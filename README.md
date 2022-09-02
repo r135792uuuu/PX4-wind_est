@@ -9,7 +9,7 @@ Developing: Wind estimation without airspeed sensors.
 2.  
 第二种情况：  
 也可以将代码的主体部分放在姿态控制和位置控制中，位置在/src/modules/mc_att_coontrol和/mc_pos_control替换掉本来应该publish的力矩和推力消息进行发布。  
-但是调参有点麻烦，后续上传替换版本。  
+但是调参有点麻烦，（混合之后也有各种问题）调试完成之后,后续上传替换版本。  
 3.  
 wind_est_main主文件。  
 wind_est_params.c文件中和姿态解算的基本一样，目的是为了拿到初始姿态。  
