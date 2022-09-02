@@ -7,7 +7,8 @@ Developing: Wind estimation without airspeed sensors.
 启动仿真时需要在起飞前手动打开 例如:wind_est start  
 （自启动需要rcS文件配置，后续上传）  
 2.  
-第二种情况：  
+第二种情况：
+直接替代发布可以有效避免px4默认的姿态控制器给它强行回正。在第一种情况下即使参数不是最优，但依然被强行会正，但是超调，调节时间会有明显的区别。
 也可以将代码的主体部分放在姿态控制和位置控制中，位置在/src/modules/mc_att_coontrol和/mc_pos_control替换掉本来应该publish的力矩和推力消息进行发布。  
 但是调参有点麻烦，（混合之后也有各种问题）调试完成之后,后续上传替换版本。  
 3.  
